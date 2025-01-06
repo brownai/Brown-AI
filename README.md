@@ -1,7 +1,7 @@
-# Brown-AI
-# Brown AI - 
+# CONSUL-AI
+# CONSUL AI - 
 
-Brown AI is a simple voice assistant application developed in Python. This assistant can perform various tasks based on voice commands from the user. For example, it can fetch information from Wikipedia, tell jokes, or simply chat with the user.
+CONSUL AI is a simple voice assistant application developed in Python. This assistant can perform various tasks based on voice commands from the user. For example, it can fetch information from Wikipedia, tell jokes, or simply chat with the user.
 
 ## Features
 
