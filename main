@@ -33,4 +33,4 @@ def tell_joke():
 return pyjokes.get_joke(language='en')
 
 def main():
-speak("Hello, I am Brown AI. How can I assist you today?")
+speak("Hello, I am CONSUL AI. How can I assist you today?")
