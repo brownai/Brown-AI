@@ -1,0 +1,36 @@
+engine = pyttsx3.init()
+
+def speak(text):
+engine.say(text)
+engine.runAndWait()
+
+def listen():
+recognizer = sr.Recognizer()
+with sr.Microphone() as source:
+print("Listening...")
+audio = recognizer.listen(source)
+try:
+command = recognizer.recognize_google(audio, language='en-US')
+print(f"Command recognized: {command}")
+return command
+except sr.UnknownValueError:
+print("Sorry, I didn't catch that. Could you please repeat?")
+return None
+except sr.RequestError:
+print("Service is unavailable")
+return None
+
+def get_wikipedia_summary(query):
+try:
+summary = wikipedia.summary(query, sentences=1, lang='en')
+return summary
+except wikipedia.exceptions.DisambiguationError as e:
+return "Too many results found, please provide more details."
+except wikipedia.exceptions.HTTPTimeoutError:
+return "There was an error connecting to Wikipedia."
+
+def tell_joke():
+return pyjokes.get_joke(language='en')
+
+def main():
+speak("Hello, I am Brown AI. How can I assist you today?")
